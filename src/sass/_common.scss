@@ -1,1 +1,8 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+.is-hidden {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+}

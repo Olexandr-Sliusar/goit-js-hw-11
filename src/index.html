@@ -1,14 +1,31 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
-  </head>
-  <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
-  </body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page title</title>
+  <link rel="stylesheet" href="./sass/index.scss" />
+  <!-- <script type="module" src="./index.js"></script> -->
+</head>
+
+<body>
+  <form class="search-form">
+
+    <input class="form-input" type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." />
+    <button type="submit" class="form-button" disabled>
+      <svg class="search-icon" width="12px" height="12px">
+        <use href="./images/sprite.svg#icon-search"></use>
+      </svg>
+
+    </button>
+  </form>
+  <div class="gallery">
+    <!-- Карточки изображений -->
+  </div>
+  <button type="button" class="load-more is-hidden">Load more</button>
+  <div class="loader is-hidden"></div>
+  <script type="module" src="./index.js"></script>
+</body>
+
 </html>
