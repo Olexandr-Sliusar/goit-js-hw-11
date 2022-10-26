@@ -51,13 +51,12 @@ async function onSubmit(event) {
 }
 
 async function onLoadMore() {
+  hideButton(loadButton);
   try {
-    loadButton.disabled = true;
     fetchService.incrementPage();
     const promise = await fetchService.fetchPictures();
     await renderGallery(promise.hits);
     checkLastPage();
-    loadButton.disabled = false;
   } catch (error) {
     handleError(error);
   }
